@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?1x1j55');
+    src:  url('../fonts/icomoon.eot?1x1j55#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?1x1j55') format('truetype'),
+    url('../fonts/icomoon.woff?1x1j55') format('woff'),
+    url('../fonts/icomoon.svg?1x1j55#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+li {
+    list-style-type: none;
+}
+a {
+    color: #757575;
+    text-decoration: none;
+    cursor: pointer;
+}
+body {
+    color: #333;
+    background-color: #f0f0f0;
+    font-size: 16px;
+}
+/*清除浮动*/
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
+/*顶部导航页面 head部分*/
+
+
+
+
+
+
+/*house-content head部分*/
+.container {
+    width: 1226px;
+    height: 686px;
+    margin: 0 auto;
+}
+.house-hd {
+    position: relative;
+    height: 58px;
+}
+.house-hd .title {
+    font-size: 22px;
+    font-weight: 200;
+    float: left;
+}
+.house-hd .more {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.house-hd .more li {
+    float: left;
+    color: #424242;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.house-hd .more .tab-list{
+    margin: 0;
+    padding: 16px 0 0;
+}
+.house-hd .tab-list li {
+    line-height: 26px;
+}
+.house-hd .more .tab-active {
+    color: #ff6700;
+    border-bottom: 2px solid #ff6700;
+}
+/*house-content body部分*/
+.span4 {
+    float: left;
+    width: 234px;
+}
+.span4 li {
+    height: 300px;
+    float: left;
+    margin-bottom: 14px;
+}
+.span4 a {
+    width: 100%;
+    height: 100%;
+}
+.span4 img {
+    width: 234px;
+}
+
+.span16 {
+    width: 978px;
+    min-height: 1px;
+    float: left;
+}
+.span16 .brick-list {
+    width: 992px;
+    height: 614px;
+}
+.span16 .brick-item {
+    position: relative;
+    width: 234px;
+    min-height: 1px;
+    float: left;
+    margin-left: 14px;
+    margin-bottom: 14px;
+    background-color: #fff;
+}
+
+.span4 li:hover,.span16 li:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,.4);
+    transition: all .6s;
+}
+
+.span16 .brick-item-m {
+    height: 246px;
+    padding: 34px 0 20px;
+}
+.brick-item-m .title {
+    color: #ccc;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+.brick-item-m .title a {
+    color: #333333;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.brick-item-m .desc {
+    margin: 0 10px 10px;
+    height: 18px;
+    font-size: 12px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #b0b0b0;
+}
+.brick-item-m .price {
+    margin: 0 10px 10px;
+    text-align: center;
+    color: #ff6700;
+    font-size: 14px;
+}
+.brick-item-m .price del {
+    color: #b0b0b0;
+}
+.brick-item-m .flag {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 2;
+    width: 64px;
+    margin-left: -32px;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    color: #fff;
+}
+.brick-item-m .flag-sale {
+    background-color: #e53935;
+}
+.brick-item-m .flag-new {
+    background-color: #83c44e;
+}
+.brick-item-m .review-wrapper {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    width: 234px;
+    height: 0;
+    overflow: hidden;
+    font-size: 12px;
+    background: #ff6700;
+    opacity: 0;
+    transition: all .3s linear;
+}
+.brick-item-m .review-wrapper a {
+    display: block;
+    padding: 8px 30px;
+    outline: 0;
+}
+.brick-item-m .review-wrapper .review {
+    display: block;
+    margin-bottom: 5px;
+    color: #fff;
+}
+.brick-item-m .review-wrapper .author {
+    display: block;
+    color: rgba(255,255,255,0.6);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.span16 .brick-item-m:hover .review-wrapper{
+    height: 76px;
+    opacity: 1;
+}
+
+
+.span16 .brick-item-s {
+    height: 93px;
+    padding-top: 50px;
+}
+.brick-item-s .title {
+    margin: -10px 110px 5px 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333;
+}
+.brick-item-s .title a {
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #333333;
+}
+.brick-item-s .price {
+    margin: 0 110px 0 30px;
+    font-size: 12px;
+    color: #ff6700;
+}
+.brick-item-s .price .num {
+    font-size: 14px;
+}
+.brick-item-s .figure-more .iconfont {
+    font-family: 'icomoon', serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 48px;
+}
+.figure-more {
+    position: absolute;
+    right: 35px;
+    top: 48px;
+    width: 48px;
+    height: 48px;
+}
+.figure-more a {
+    display: block;
+    color: #ff6700;
+}
+.brick-item-s .more {
+    display: block;
+    margin: 0 110px 0 30px;
+    font-size: 18px;
+    color: #333;
+}
+.brick-item-s .more small {
+    display: block;
+    font-size: 12px;
+    color: #757575;
+}
+
+.house-content .figure-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 18px;
+}
+.house-content .figure-img img {
+    width: 150px;
+    height: 150px;
+}
+.house-content .figure-img a {
+    display: block;
+}
+.house-content .figure {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 20px;
+    top: 32px;
+}
+.house-content .figure img {
+    width: 80px;
+    height: 80px;
+}
+.house-content .figure a {
+    display: block;
+}

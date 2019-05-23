@@ -1,0 +1,3 @@
+# .gitignore文件中注释以“#”开头
+/.idea
+/resource
