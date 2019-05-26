@@ -14,6 +14,7 @@
 }
 li {
     list-style-type: none;
+    display: list-item;
 }
 a {
     color: #757575;
@@ -22,8 +23,8 @@ a {
 }
 body {
     color: #333;
-    background-color: #f0f0f0;
-    font-size: 16px;
+    background-color: #ffffff;
+    font: 14px/1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
 }
 /*清除浮动*/
 .clearfix:before,.clearfix:after {
@@ -36,19 +37,482 @@ body {
 .clearfix {
     *zoom: 1;
 }
-
-/*顶部导航页面 head部分*/
-
-
-
-
-
-
-/*house-content head部分*/
 .container {
     width: 1226px;
-    height: 686px;
     margin: 0 auto;
+}
+
+/*顶部导航栏部分*/
+.site-top-nav {
+    position: relative;
+    z-index: 30;
+    height: 40px;
+    font-size: 12px;
+    color: #b0b0b0;
+    background: #333;
+}
+.site-top-nav a {
+    color: #b0b0b0;
+    line-height: 40px;
+    display: inline-block;
+}
+.site-top-nav a:hover {
+    color: #ffffff;
+}
+.site-top-nav .top-nav {
+    float: left;
+    line-height: 40px;
+}
+.top-nav .box {
+    width: 124px;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    padding: 18px 0 14px;
+    background: rgb(255, 255, 255);
+    margin-left: -47px;
+    box-shadow: rgb(170, 170, 170) 0 1px 5px;
+    display: none;
+}
+.top-nav #down-app:hover .box {
+    display: block;
+}
+.top-nav .box em {
+    width: 0;
+    height: 0;
+    border-width: 0 10px 10px;
+    border-style: solid;
+    border-color: transparent transparent #fff;
+    position: absolute;
+    top: -10px;
+    left: 50px;
+}
+.top-nav .box img {
+    width: 90px;
+    height: 90px;
+    display: block;
+    margin: 0 auto;
+}
+.top-nav .box span {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    line-height: 1;
+    margin-top: 14px;
+}
+.top-nav .seq {
+    margin: 0 0.5em;
+    color: #424242;
+}
+.site-top-nav .top-cart,.site-top-nav .top-info {
+    position: relative;
+    float: right;
+    height: 40px;
+}
+.site-top-nav .top-cart {
+    width: 120px;
+    margin-left: 15px;
+}
+.site-top-nav .top-cart .cart-mini {
+    position: relative;
+    z-index: 32;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #b0b0b0;
+    background: #424242;
+}
+.top-cart i {
+    margin-right: 4px;
+    font-size: 20px;
+    line-height: 20px;
+    vertical-align: -4px;
+}
+.top-cart .iconfont {
+    font-family: 'icomoon',serif;
+    font-style: normal;
+}
+.top-nav .cart-mini-num {
+    margin-left: -4px;
+}
+.site-top-nav .top-info {
+    line-height: 40px;
+}
+.top-info .link {
+    padding: 0 5px;
+    text-align: center;
+    float: left;
+}
+.top-info .seq {
+    margin: 0;
+    float: left;
+    color: #424242;
+}
+.top-info .message {
+    float: left;
+    padding: 0 10px;
+}
+
+/*头部内容部分*/
+.site-header .header-logo {
+    float: left;
+    width: 62px;
+    margin-top: 22px;
+}
+.site-header .header-logo .logo {
+    position: relative;
+    display: block;
+    width: 55px;
+    height: 55px;
+    overflow: hidden;
+    background: #ff6700 url("../images/mi-logo.png") no-repeat 50% 50%;
+}
+.site-header .header-nav {
+    float: left;
+    width: 850px;
+}
+.site-header .nav-list {
+    position: relative;
+    z-index: 10;
+    float: left;
+    width: 820px;
+    height: 88px;
+    margin: 0;
+    padding: 12px 0 0 30px;
+    font-size: 16px;
+}
+/*.nav-list下的除第一个li之外的li的样式*/
+.site-header .nav-item .item-children {
+    display: none;
+}
+.site-header .header-nav .nav-item .container {
+    position: relative;
+}
+.site-header .nav-item .children-list .figure img {
+    width: 160px;
+    height: 110px;
+}
+.site-header .nav-item .title {
+
+}
+
+
+
+/*.site-header头部logo，导航，搜索*/
+.site-header .nav-item {
+    float: left;
+}
+.site-header .nav-item .link {
+    display: block;
+    padding: 26px 10px 38px;
+    color: #333333;
+}
+.site-header .nav-item .link:hover {
+    color: #ff6700;
+}
+.site-header .header-search {
+    float: right;
+    width: 296px;
+    margin-top: 25px;
+}
+.site-header .header-search .search-form {
+    position: relative;
+    width: 296px;
+    height: 50px;
+}
+.site-header .search-form .search-text {
+    position: absolute;
+    top: 0;
+    right: 51px;
+    z-index: 1;
+    width: 223px;
+    height: 48px;
+    padding: 0 10px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    line-height: 48px;
+    outline: 0;
+    transition: all .2s;
+}
+.site-header .search-form .search-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    width: 52px;
+    height: 50px;
+    border: 1px solid #e0e0e0;
+    font-size: 24px;
+    line-height: 24px;
+    background: #fff;
+    color: #616161;
+    outline: 0;
+    transition: all .2s;
+}
+.site-header .header-search .search-btn:hover {
+    background: #ff6700;
+    color: #ffffff;
+}
+.iconfont {
+    font-family: 'icomoon',serif;
+    font-style: normal;
+}
+
+
+/*头部ul部分的第一个li  写在 .site-header里的测试部分*/
+.site-header .nav-list .nav-category {
+    position: relative;
+    float: left;
+    height: 88px;
+    width: 127px;
+    padding-right: 15px;
+    visibility: hidden;
+}
+.nav-category .link-category {
+    display: block;
+    padding: 26px 0 38px;
+    text-align: right;
+    color: #333;
+    visibility: hidden;
+}
+.nav-category .site-category {
+    display: block;
+    position: absolute;
+    top: 88px;
+    left: -92px;
+    z-index: 21;
+    width: 234px;
+    height: 460px;
+    font-size: 14px;
+}
+.site-category .site-category-list {
+    height: 420px;
+    color: #ffffff;
+    border: 0;
+    background: rgba(0,0,0,.6);
+    margin: 0;
+    padding: 20px 0;
+}
+.site-category-list .category-item:hover {
+    background-color: #ff6700;
+}
+.site-category-list .title {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    height: 42px;
+    line-height: 42px;
+    color: #ffffff;
+}
+.site-category-list .title i {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 16px;
+    line-height: 16px;
+    color: rgba(255,255,255,.5);
+}
+.site-category-list .children {
+    display: none;
+    position: absolute;
+    left: 234px;
+    top: 0;
+    z-index: 24;
+    height: 458px;
+    border: 1px solid #e0e0e0;
+    border-left: 0;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
+}
+.site-category-list .children .children-list {
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+}
+.children-col-4 {
+    width: 992px;
+}
+.children-list-col {
+    width: 248px;
+    float: left;
+}
+.site-category-list .children-list li {
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+.site-category-list .children-list .link {
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+    transition: color .2s;
+}
+/*.site-header里的第一个li的测试部分结束*/
+
+
+/*.site-home 头部导航部分，轮播图，闪购。。*/
+.site-home {
+    position: relative;
+    z-index: 10;
+}
+.site-home .home-hero {
+    position: relative;
+    margin-bottom: 26px;
+}
+/*左侧菜单栏模块*/
+.site-home .site-hero .site-hero-list {
+    position: relative;
+    float: left;
+    height: 88px;
+    width: 234px;
+    padding-right: 15px;
+}
+.home-hero .site-hero {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 21;
+    width: 234px;
+    height: 460px;
+    font-size: 14px;
+    background: rgba(0,0,0,.6);
+}
+.site-hero .site-hero-list {
+    height: 420px;
+    color: #ffffff;
+    border: 0;
+    margin: 0;
+    padding: 20px 0;
+}
+.site-hero-list .hero-item:hover {
+    background-color: #ff6700;
+}
+.site-hero-list .title {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    height: 42px;
+    line-height: 42px;
+    color: #ffffff;
+}
+.site-hero-list .title i {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 16px;
+    line-height: 16px;
+    color: rgba(255,255,255,.5);
+}
+/*左侧菜单栏对应栏目弹出的选项面板 .children*/
+.site-home .site-hero-list .children {
+    display: none;
+    position: absolute;
+    left: 234px;
+    top: 0;
+    z-index: 24;
+    height: 458px;
+    border: 1px solid #e0e0e0;
+    border-left: 0;
+    background: #fff;
+    /*box-shadow: 0 8px 16px rgba(0,0,0,0.18);*/
+}
+.site-home .site-hero .hero-item:hover .children {
+    display: block;
+}
+.site-hero-list .children .children-list {
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+}
+.children-col-4 {
+    width: 992px;
+}
+.children-list-col {
+    width: 248px;
+    float: left;
+}
+.site-hero-list .children-list li {
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+.site-hero-list .children-list .link {
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+    transition: color .2s;
+}
+.children-list .link .link-img {
+    margin-right: 12px;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+}
+.children-list .link .text {
+    line-height: 40px;
+}
+
+
+/*轮播图模块*/
+.home-hero-slider {
+    position: relative;
+    height: 460px;
+    overflow: hidden;
+}
+.home-hero-slider .ui-wrapper {
+    max-width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.ui-wrapper .ui-viewport {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 460px;
+}
+.ui-viewport .ui-viewport-slider {
+    width: auto;
+    position: relative;
+}
+.ui-viewport-slider .slider {
+    float: none;
+    list-style: none;
+    position: absolute;
+    right: 0;
+    width: 1226px;
+    height: 460px;
+    z-index: -99;
+    /*display: none;*/
+}
+.ui-viewport-slider .slider a {
+    display: block;
+}
+.ui-viewport-slider .slider img {
+    width: 1226px;
+    height: 460px;
+    max-width: 100%;
+    display: block;
+}
+
+
+
+
+/*house-electric  house-hd head部分*/
+.page-main {
+    background-color: #f5f5f5;
+}
+.page-main .house-electrical {
+    margin-top: 100px;
+    padding-top: 22px;
+    height: 686px;
 }
 .house-hd {
     position: relative;
@@ -64,24 +528,22 @@ body {
     top: 0;
     right: 0;
 }
-.house-hd .more li {
-    float: left;
-    color: #424242;
-    margin-left: 30px;
-    cursor: pointer;
-}
 .house-hd .more .tab-list{
     margin: 0;
     padding: 16px 0 0;
 }
-.house-hd .tab-list li {
+.house-hd .more .tab-list li {
+    float: left;
+    color: #424242;
+    margin-left: 30px;
+    cursor: pointer;
     line-height: 26px;
 }
 .house-hd .more .tab-active {
     color: #ff6700;
     border-bottom: 2px solid #ff6700;
 }
-/*house-content body部分*/
+/*house-electric   house-bd 部分*/
 .span4 {
     float: left;
     width: 234px;
@@ -104,10 +566,12 @@ body {
     min-height: 1px;
     float: left;
 }
+/*span16下的ul的属性*/
 .span16 .brick-list {
     width: 992px;
     height: 614px;
 }
+/*span16下的li的通用属性*/
 .span16 .brick-item {
     position: relative;
     width: 234px;
@@ -123,10 +587,12 @@ body {
     transition: all .6s;
 }
 
+/*span16下中等li的属性*/
 .span16 .brick-item-m {
     height: 246px;
     padding: 34px 0 20px;
 }
+
 .brick-item-m .title {
     color: #ccc;
     margin: 0 10px;
@@ -141,6 +607,20 @@ body {
     white-space: nowrap;
     overflow: hidden;
 }
+/*span16下中等li的图片的可通用属性*/
+.brick-item-m .figure-img {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 18px;
+}
+.brick-item-m .figure-img img {
+    width: 150px;
+    height: 150px;
+}
+.brick-item-m .figure-img a {
+    display: block;
+}
+/*中等li下面的可通用属性*/
 .brick-item-m .desc {
     margin: 0 10px 10px;
     height: 18px;
@@ -191,29 +671,30 @@ body {
     opacity: 0;
     transition: all .3s linear;
 }
-.brick-item-m .review-wrapper a {
-    display: block;
-    padding: 8px 30px;
-    outline: 0;
+.brick-item-m:hover .review-wrapper{
+    height: 76px;
+    opacity: 1;
 }
-.brick-item-m .review-wrapper .review {
+.brick-item-m .review {
     display: block;
     margin-bottom: 5px;
     color: #fff;
 }
-.brick-item-m .review-wrapper .author {
+.brick-item-m .author {
     display: block;
     color: rgba(255,255,255,0.6);
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
-.span16 .brick-item-m:hover .review-wrapper{
-    height: 76px;
-    opacity: 1;
+.brick-item-m .review-wrapper a {
+    display: block;
+    padding: 8px 30px;
+    outline: 0;
 }
 
 
+/*小li下的可通用属性*/
 .span16 .brick-item-s {
     height: 93px;
     padding-top: 50px;
@@ -246,17 +727,6 @@ body {
     font-size: 48px;
     line-height: 48px;
 }
-.figure-more {
-    position: absolute;
-    right: 35px;
-    top: 48px;
-    width: 48px;
-    height: 48px;
-}
-.figure-more a {
-    display: block;
-    color: #ff6700;
-}
 .brick-item-s .more {
     display: block;
     margin: 0 110px 0 30px;
@@ -269,29 +739,136 @@ body {
     color: #757575;
 }
 
-.house-content .figure-img {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto 18px;
+.brick-item-s .figure-more {
+    position: absolute;
+    right: 35px;
+    top: 48px;
+    width: 48px;
+    height: 48px;
 }
-.house-content .figure-img img {
-    width: 150px;
-    height: 150px;
-}
-.house-content .figure-img a {
+.brick-item-s .figure-more a {
     display: block;
+    color: #ff6700;
 }
-.house-content .figure {
+/*小li下的img的可通用属性*/
+.brick-item-s .figure {
     width: 80px;
     height: 80px;
     position: absolute;
     right: 20px;
     top: 32px;
 }
-.house-content .figure img {
+.brick-item-s .figure img {
     width: 80px;
     height: 80px;
 }
-.house-content .figure a {
+.brick-item-s .figure a {
     display: block;
+}
+
+
+/*home-nav-bar 右侧固定定位的导航栏*/
+.home-nav-bar {
+    position: fixed;
+    top: 240px;
+    bottom: 70px;
+    width: 27px;
+    right: 50%;
+    margin-right: -640px;
+    z-index: 9999;
+}
+.bar-right .mi-bar-sort {
+    margin: 0;
+    padding: 0;
+    border: 1px solid #f5f5f5;
+}
+.bar-right .mi-bar-sort .bar-sort {
+    width: 25px;
+    height: 39px;
+    display: block;
+    position: relative;
+    background-color: #ffffff;
+    border: 1px solid #f5f5f5;
+    border-top: none;
+    font-size: 18px;
+    line-height: 39px;
+    text-align: center;
+}
+.home-nav-bar .sort-link {
+    display: block;
+    height: 100%;
+}
+.bar-right .bar-sort .iconfont:hover {
+    color: #ff6700;
+}
+.bar-right .bar-sort .iconfont {
+    font-family: 'icomoon',serif;
+    font-style: normal;
+}
+.bar-right .bar-sort .bar-pop {
+    position: absolute;
+    top: 0;
+    left: -137px;
+    height: 187px;
+    width: auto;
+    display: none;
+}
+.bar-sort .sort-link:hover .bar-pop {
+    display: block;
+}
+.bar-sort .bar-pop .pop-content {
+    float: left;
+    height: 187px;
+    background-color: #fff;
+    border: 1px solid #f5f5f5;
+}
+.bar-pop .pop-img {
+    width: 100px;
+    height: 100px;
+    margin: 20px 14px;
+    background-color: #fff;
+    border: 0;
+}
+.bar-pop .pop-text {
+    width: 83px;
+    line-height: 21px;
+    margin: -10px auto 0;
+    padding: 0 8px;
+    height: 27px;
+    background-color: #fff;
+    font-size: 14px;
+    text-align: center;
+}
+.bar-pop .pop-rack {
+    background-color: #ffffff;
+    width: 10px;
+    height: 10px;
+    float: right;
+    transform: rotate(45deg);
+    position: relative;
+    top: 14px;
+    right: 7px;
+}
+.bar-right .bar-sort .sort-link .bar-pop-s {
+    position: absolute;
+    left: -135px;
+    top: 6px;
+    width: 126px;
+    height: 27px;
+}
+.bar-right .bar-sort .sort-link .bar-pop-s .pop-text {
+    float: right;
+    padding: 0 8px;
+    height: 27px;
+    line-height: 27px;
+    background: #fff;
+    border: 1px solid #f5f5f5;
+    margin: 0;
+    color: #757575;
+    font-size: 14px;
+    text-align: center;
+}
+.bar-right .bar-sort .sort-link .bar-pop-s .pop-rack {
+    right: -105px;
+    top: 10px;
 }
