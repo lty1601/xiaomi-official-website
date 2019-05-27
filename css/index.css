@@ -155,6 +155,7 @@ body {
     padding: 0 10px;
 }
 
+
 /*头部内容部分*/
 .site-header .header-logo {
     float: left;
@@ -183,26 +184,219 @@ body {
     padding: 12px 0 0 30px;
     font-size: 16px;
 }
+
+/*头部ul部分的第一个li  写在 .site-header里的部分*/
+.site-header .nav-list .nav-category {
+    position: relative;
+    float: left;
+    height: 88px;
+    width: 127px;
+    padding-right: 15px;
+}
+.nav-category .link-category {
+    display: block;
+    padding: 26px 0 38px;
+    text-align: right;
+    color: #333;
+    visibility: hidden;
+}
+/*左侧菜单栏模块*/
+.site-header .site-category .site-category-list {
+    position: relative;
+    float: left;
+    height: 88px;
+    width: 234px;
+    padding: 20px 15px 20px 0;
+    /*padding-right: 15px;*/
+    color: #ffffff;
+    border: 0;
+    margin: 0;
+}
+.header-nav .site-category {
+    display: block;
+    position: absolute;
+    top: 88px;
+    left: -92px;
+    z-index: 21;
+    width: 234px;
+    height: 460px;
+    font-size: 14px;
+    background: rgba(0,0,0,.6);
+}
+.site-category-list .category-item:hover {
+    background-color: #ff6700;
+}
+.site-category-list .title {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    height: 42px;
+    line-height: 42px;
+    color: #ffffff;
+}
+.site-category-list .title i {
+    position: absolute;
+    top: 12px;
+    right: 20px;
+    font-size: 16px;
+    line-height: 16px;
+    color: rgba(255,255,255,.5);
+}
+/*左侧菜单栏对应栏目弹出的选项面板 .children*/
+.site-header  .site-category-list .children {
+    display: none;
+    position: absolute;
+    left: 234px;
+    top: 0;
+    z-index: 24;
+    height: 458px;
+    border: 1px solid #e0e0e0;
+    border-left: 0;
+    background: #fff;
+}
+.site-header  .site-category .category-item:hover .children {
+    display: block;
+}
+.site-category-list .children .children-list {
+    height: 458px;
+    margin: 0;
+    padding: 2px 0;
+}
+.children-col-2 {
+    width: 530px;
+}
+.children-col-3 {
+    width: 795px;
+}
+.children-col-4 {
+    width: 992px;
+}
+.children-list-col {
+    width: 248px;
+    float: left;
+}
+.site-category-list .children-list li {
+    position: relative;
+    float: left;
+    width: 265px;
+    height: 76px;
+}
+.site-category-list .children-list .link {
+    display: block;
+    padding: 18px 20px;
+    line-height: 40px;
+    color: #333;
+    transition: color .2s;
+}
+.children-list .link .link-img {
+    margin-right: 12px;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+}
+.children-list .link .text {
+    line-height: 40px;
+}
+
 /*.nav-list下的除第一个li之外的li的样式*/
 .site-header .nav-item .item-children {
+    position: absolute;
+    left: -234px;
+    z-index: 22;
+    height: 229px;
+    border-top: 1px solid #e0e0e0;
+    background: #fff;
     display: none;
+}
+.site-header .nav-item:nth-child(3) .item-children {
+    left: -318px;
+}
+.site-header .nav-item:nth-child(4) .item-children {
+    left: -370px;
+}
+.site-header .nav-item:nth-child(5) .item-children {
+    left: -422px;
+}
+.site-header .nav-item:nth-child(6) .item-children {
+    left: -490px;
+}
+.site-header .nav-item:nth-child(7) .item-children {
+    left: -542px;
+}
+.site-header .nav-item:nth-child(8) .item-children {
+    left: -594px;
+}
+.site-header .nav-item:nth-child(9) .item-children {
+    left: -662px;
+}
+
+.site-header .nav-item:hover .item-children {
+    display: block;
 }
 .site-header .header-nav .nav-item .container {
     position: relative;
 }
-.site-header .nav-item .children-list .figure img {
+.site-header .nav-item .children-list {
+    font-size: 12px;
+    position: relative;
+}
+.site-header .nav-item .children-list li {
+    position: relative;
+    float: left;
+    width: 180px;
+    padding: 35px 12px 0;
+    text-align: center;
+}
+.site-header .nav-item .children-list .figure {
+    width: 160px;
+    height: 110px;
+    margin: 0 auto 16px;
+    text-align: center;
+}
+.site-header .nav-item .children-list .figure a {
+    display: block;
+}
+.site-header .nav-item .children-list img {
     width: 160px;
     height: 110px;
 }
-.site-header .nav-item .title {
-
+.site-header .nav-item .children-list .title {
+    line-height: 20px;
 }
-
+.site-header .nav-item .children-list .price {
+    line-height: 20px;
+    color: #ff6700;
+}
+.site-header .nav-item .children-list .flags {
+    position: absolute;
+    top: -1px;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+}
+.site-header .nav-item .children-list .flag {
+    display: inline-block;
+    height: 18px;
+    padding: 1px 20px;
+    border: 1px solid #ff6700;
+    color: #ff6700;
+}
+.site-header .nav-item .children-list .seq {
+    display: inline-block;
+    border-right: 1px solid #ccc;
+    height: 100px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+}
 
 
 /*.site-header头部logo，导航，搜索*/
 .site-header .nav-item {
     float: left;
+    position: relative;
 }
 .site-header .nav-item .link {
     display: block;
@@ -261,205 +455,14 @@ body {
 }
 
 
-/*头部ul部分的第一个li  写在 .site-header里的测试部分*/
-.site-header .nav-list .nav-category {
-    position: relative;
-    float: left;
-    height: 88px;
-    width: 127px;
-    padding-right: 15px;
-    visibility: hidden;
-}
-.nav-category .link-category {
-    display: block;
-    padding: 26px 0 38px;
-    text-align: right;
-    color: #333;
-    visibility: hidden;
-}
-.nav-category .site-category {
-    display: block;
-    position: absolute;
-    top: 88px;
-    left: -92px;
-    z-index: 21;
-    width: 234px;
-    height: 460px;
-    font-size: 14px;
-}
-.site-category .site-category-list {
-    height: 420px;
-    color: #ffffff;
-    border: 0;
-    background: rgba(0,0,0,.6);
-    margin: 0;
-    padding: 20px 0;
-}
-.site-category-list .category-item:hover {
-    background-color: #ff6700;
-}
-.site-category-list .title {
-    position: relative;
-    display: block;
-    padding-left: 30px;
-    height: 42px;
-    line-height: 42px;
-    color: #ffffff;
-}
-.site-category-list .title i {
-    position: absolute;
-    top: 12px;
-    right: 20px;
-    font-size: 16px;
-    line-height: 16px;
-    color: rgba(255,255,255,.5);
-}
-.site-category-list .children {
-    display: none;
-    position: absolute;
-    left: 234px;
-    top: 0;
-    z-index: 24;
-    height: 458px;
-    border: 1px solid #e0e0e0;
-    border-left: 0;
-    background: #fff;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.18);
-}
-.site-category-list .children .children-list {
-    height: 458px;
-    margin: 0;
-    padding: 2px 0;
-}
-.children-col-4 {
-    width: 992px;
-}
-.children-list-col {
-    width: 248px;
-    float: left;
-}
-.site-category-list .children-list li {
-    position: relative;
-    float: left;
-    width: 265px;
-    height: 76px;
-}
-.site-category-list .children-list .link {
-    display: block;
-    padding: 18px 20px;
-    line-height: 40px;
-    color: #333;
-    transition: color .2s;
-}
-/*.site-header里的第一个li的测试部分结束*/
-
-
 /*.site-home 头部导航部分，轮播图，闪购。。*/
 .site-home {
     position: relative;
-    z-index: 10;
 }
 .site-home .home-hero {
     position: relative;
     margin-bottom: 26px;
 }
-/*左侧菜单栏模块*/
-.site-home .site-hero .site-hero-list {
-    position: relative;
-    float: left;
-    height: 88px;
-    width: 234px;
-    padding-right: 15px;
-}
-.home-hero .site-hero {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 21;
-    width: 234px;
-    height: 460px;
-    font-size: 14px;
-    background: rgba(0,0,0,.6);
-}
-.site-hero .site-hero-list {
-    height: 420px;
-    color: #ffffff;
-    border: 0;
-    margin: 0;
-    padding: 20px 0;
-}
-.site-hero-list .hero-item:hover {
-    background-color: #ff6700;
-}
-.site-hero-list .title {
-    position: relative;
-    display: block;
-    padding-left: 30px;
-    height: 42px;
-    line-height: 42px;
-    color: #ffffff;
-}
-.site-hero-list .title i {
-    position: absolute;
-    top: 12px;
-    right: 20px;
-    font-size: 16px;
-    line-height: 16px;
-    color: rgba(255,255,255,.5);
-}
-/*左侧菜单栏对应栏目弹出的选项面板 .children*/
-.site-home .site-hero-list .children {
-    display: none;
-    position: absolute;
-    left: 234px;
-    top: 0;
-    z-index: 24;
-    height: 458px;
-    border: 1px solid #e0e0e0;
-    border-left: 0;
-    background: #fff;
-    /*box-shadow: 0 8px 16px rgba(0,0,0,0.18);*/
-}
-.site-home .site-hero .hero-item:hover .children {
-    display: block;
-}
-.site-hero-list .children .children-list {
-    height: 458px;
-    margin: 0;
-    padding: 2px 0;
-}
-.children-col-4 {
-    width: 992px;
-}
-.children-list-col {
-    width: 248px;
-    float: left;
-}
-.site-hero-list .children-list li {
-    position: relative;
-    float: left;
-    width: 265px;
-    height: 76px;
-}
-.site-hero-list .children-list .link {
-    display: block;
-    padding: 18px 20px;
-    line-height: 40px;
-    color: #333;
-    transition: color .2s;
-}
-.children-list .link .link-img {
-    margin-right: 12px;
-    vertical-align: middle;
-    width: 40px;
-    height: 40px;
-}
-.children-list .link .text {
-    line-height: 40px;
-}
-
-
 /*轮播图模块*/
 .home-hero-slider {
     position: relative;
@@ -539,40 +542,41 @@ body {
     cursor: pointer;
     line-height: 26px;
 }
+
 .house-hd .more .tab-active {
     color: #ff6700;
     border-bottom: 2px solid #ff6700;
 }
 /*house-electric   house-bd 部分*/
-.span4 {
+.house-bd .span4 {
     float: left;
     width: 234px;
 }
-.span4 li {
+.house-bd .span4 li {
     height: 300px;
     float: left;
     margin-bottom: 14px;
 }
-.span4 a {
+.house-bd .span4 a {
     width: 100%;
     height: 100%;
 }
-.span4 img {
+.house-bd .span4 img {
     width: 234px;
 }
 
-.span16 {
+.house-bd .span16 {
     width: 978px;
     min-height: 1px;
     float: left;
 }
 /*span16下的ul的属性*/
-.span16 .brick-list {
+.house-bd .span16 .brick-list {
     width: 992px;
     height: 614px;
 }
 /*span16下的li的通用属性*/
-.span16 .brick-item {
+.house-bd .span16 .brick-item {
     position: relative;
     width: 234px;
     min-height: 1px;
@@ -581,26 +585,24 @@ body {
     margin-bottom: 14px;
     background-color: #fff;
 }
-
-.span4 li:hover,.span16 li:hover {
+.house-bd .span4 li:hover,.span16 li:hover {
     box-shadow: 0 15px 30px rgba(0,0,0,.4);
     transition: all .6s;
 }
 
 /*span16下中等li的属性*/
-.span16 .brick-item-m {
+.house-bd .span16 .brick-item-m {
     height: 246px;
     padding: 34px 0 20px;
 }
-
-.brick-item-m .title {
+.house-bd .brick-item-m .title {
     color: #ccc;
     margin: 0 10px;
     font-size: 14px;
     font-weight: 400;
     text-align: center;
 }
-.brick-item-m .title a {
+.house-bd .brick-item-m .title a {
     color: #333333;
     display: block;
     text-overflow: ellipsis;
@@ -608,16 +610,16 @@ body {
     overflow: hidden;
 }
 /*span16下中等li的图片的可通用属性*/
-.brick-item-m .figure-img {
+.house-bd .brick-item-m .figure-img {
     width: 150px;
     height: 150px;
     margin: 0 auto 18px;
 }
-.brick-item-m .figure-img img {
+.house-bd .brick-item-m .figure-img img {
     width: 150px;
     height: 150px;
 }
-.brick-item-m .figure-img a {
+.house-bd .brick-item-m .figure-img a {
     display: block;
 }
 /*中等li下面的可通用属性*/
@@ -693,9 +695,8 @@ body {
     outline: 0;
 }
 
-
 /*小li下的可通用属性*/
-.span16 .brick-item-s {
+.house-bd .span16 .brick-item-s {
     height: 93px;
     padding-top: 50px;
 }
@@ -738,7 +739,6 @@ body {
     font-size: 12px;
     color: #757575;
 }
-
 .brick-item-s .figure-more {
     position: absolute;
     right: 35px;
